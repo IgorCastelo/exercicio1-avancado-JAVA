@@ -10,6 +10,8 @@ public abstract class ItemBiblioteca implements Comparable<ItemBiblioteca> {
     public ItemBiblioteca(String titulo, String autor) {
         this.titulo=titulo;
         this.autor=autor;
+        this.disponivel=true;
+
     }
 
     public String getTitulo() {
