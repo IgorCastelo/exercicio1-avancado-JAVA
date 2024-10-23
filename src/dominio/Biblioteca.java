@@ -1,6 +1,7 @@
 package dominio;
 
 import excecoes.ItemNaoEncontradoException;
+import interfaces.Gerenciavel;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,8 +3,12 @@ package dominio;
 import excecoes.ItemNaoDisponivelException;
 
 public class MidiaDigital extends ItemBiblioteca {
+    public MidiaDigital(String titulo, String autor) {
+        super(titulo, autor);
+    }
+
     @Override
-    void emprestar() throws ItemNaoDisponivelException{
+    public void emprestar() throws ItemNaoDisponivelException{
         if (!isDisponivel()){
             throw new ItemNaoDisponivelException("Item não disponível");
         }setDisponivel(false);
@@ -12,7 +16,7 @@ public class MidiaDigital extends ItemBiblioteca {
     }
 
     @Override
-    void devolver() {
+    public void devolver() {
         setDisponivel(true);
         System.out.println("Mídia devolvida com sucesso.");
     }

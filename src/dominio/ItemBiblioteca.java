@@ -7,6 +7,12 @@ public abstract class ItemBiblioteca implements Comparable<ItemBiblioteca> {
     private String autor;
     private boolean disponivel;
 
+    public ItemBiblioteca(String titulo, String autor) {
+        this.titulo=titulo;
+        this.autor=autor;
+        this.disponivel=true;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -56,6 +62,6 @@ public abstract class ItemBiblioteca implements Comparable<ItemBiblioteca> {
         return this.titulo.compareTo(item.getTitulo());
     }
 
-    void emprestar() throws ItemNaoDisponivelException { }
-    void devolver(){}
+    public void emprestar() throws ItemNaoDisponivelException { }
+    public void devolver()throws ItemNaoDisponivelException{}
 }

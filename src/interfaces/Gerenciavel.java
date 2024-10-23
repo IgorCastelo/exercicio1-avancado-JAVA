@@ -1,5 +1,6 @@
-package dominio;
+package interfaces;
 
+import dominio.ItemBiblioteca;
 import excecoes.ItemNaoEncontradoException;
 
 public interface Gerenciavel  {

@@ -3,11 +3,13 @@ package dominio;
 import excecoes.ItemNaoDisponivelException;
 
 public class Livro extends ItemBiblioteca {
-    public Livro() {
+
+    public Livro(String titulo, String autor) {
+        super(titulo, autor);
     }
 
     @Override
-    void emprestar() throws ItemNaoDisponivelException {
+    public void emprestar() throws ItemNaoDisponivelException {
     if (!isDisponivel()){
         throw new ItemNaoDisponivelException("Livro não disponível!");
     }setDisponivel(false);
@@ -15,7 +17,7 @@ public class Livro extends ItemBiblioteca {
     }
 
     @Override
-    void devolver() {
+    public void devolver() {
             setDisponivel(true);
         System.out.println("Livro devolvido com sucesso");
         }
