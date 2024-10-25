@@ -18,8 +18,8 @@ public class Livro extends ItemBiblioteca {
 
     @Override
     public void devolver() {
-            setDisponivel(true);
-        System.out.println("Livro devolvido com sucesso");
-        }
+        setDisponivel(true);
+        System.out.println("Livro devolvido com sucesso.");
     }
+}
 

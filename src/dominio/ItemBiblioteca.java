@@ -59,6 +59,15 @@ public abstract class ItemBiblioteca implements Comparable<ItemBiblioteca> {
     }
 
     @Override
+    public String toString() {
+        return "ItemBiblioteca{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", disponivel=" + disponivel +
+                '}';
+    }
+
+    @Override
     public int compareTo(ItemBiblioteca item) {
         return this.titulo.compareTo(item.getTitulo());
     }

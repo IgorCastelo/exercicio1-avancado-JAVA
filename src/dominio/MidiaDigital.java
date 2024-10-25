@@ -10,14 +10,15 @@ public class MidiaDigital extends ItemBiblioteca {
     @Override
     public void emprestar() throws ItemNaoDisponivelException{
         if (!isDisponivel()){
-            throw new ItemNaoDisponivelException("Item não disponível");
+            throw new ItemNaoDisponivelException("Mídia digital indisponível");
         }setDisponivel(false);
-        System.out.println("midia  emprestada com sucesso");
+        System.out.println("Mídia digital emprestada com sucesso");
     }
 
     @Override
     public void devolver() {
         setDisponivel(true);
-        System.out.println("Mídia devolvida com sucesso.");
+        System.out.println("Midia devolvida com sucesso.");
     }
 }
+

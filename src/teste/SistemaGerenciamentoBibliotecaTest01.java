@@ -18,12 +18,13 @@ public class SistemaGerenciamentoBibliotecaTest01 {
         try {
             ItemBiblioteca item = biblioteca.buscarItem("Rock Animal");
             item.emprestar();
-            System.out.println("Emprestimo realizado com sucesso");
             item.devolver();
-            System.out.println("Item devolvido com sucesso");
-
             biblioteca.removerItem(item);
-//biblioteca.buscarItem("O Programador Pragmático");
+            biblioteca.adicionarItem(new Livro("O limite a da ética", "Emannuel Kant"));
+            System.out.println(biblioteca.buscarItem("O limite a da ética"));
+
+
+
 
         } catch (ItemNaoEncontradoException | ItemNaoDisponivelException e){
             e.printStackTrace();
